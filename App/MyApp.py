@@ -6,7 +6,7 @@ from model import GDPPredictor
 st.set_page_config(layout="wide")
 
 
-df = pd.read_csv("../data/GDP_df.csv")
+df = pd.read_csv("./data/GDP_df.csv")
 
 # Calculate total across years to sort by overall value
 df['Total'] = df[['2012', '2013', '2014', '2015']].sum(axis=1)
@@ -163,7 +163,7 @@ st.altair_chart(chart_top5, use_container_width=True)
 st.altair_chart(chart_bottom5, use_container_width=True)
 
 # Load your dataset here (for demo, we'll assume df is already defined)
-df = pd.read_csv("../data/final.csv")
+df = pd.read_csv("./data/final.csv")
 
 # Example placeholder: Ensure to replace this with your actual data
 # df = pd.read_csv("your_data.csv")
@@ -179,7 +179,7 @@ st.altair_chart(line_chart, use_container_width=True)
 st.title("RNN With LSTM")
 
 # Load data
-df = pd.read_csv('../data/final.csv')
+df = pd.read_csv('./data/final.csv')
 
 # Initialize predictor
 predictor = GDPPredictor(sequence_length=3)
@@ -219,14 +219,6 @@ selected_countries = st.multiselect("Select countries to predict", countries_lis
 # Slider for how many years ahead to predict
 future_years = st.slider("Years to predict ahead", min_value=1, max_value=10, value=3)
 print(df.columns)
-
-import plotly.graph_objects as go
-
-import plotly.graph_objects as go
-
-import plotly.graph_objects as go
-
-import plotly.graph_objects as go
 
 import plotly.graph_objects as go
 
