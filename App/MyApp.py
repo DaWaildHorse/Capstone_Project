@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 import altair as alt
 from model import GDPPredictor
 st.set_page_config(layout="wide")
@@ -222,7 +221,6 @@ future_years = st.slider("Years to predict ahead", min_value=1, max_value=10, va
 print(df.columns)
 
 import plotly.graph_objects as go
-import matplotlib.pyplot as plt
 
 import plotly.graph_objects as go
 
