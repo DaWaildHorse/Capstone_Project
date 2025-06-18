@@ -1,7 +1,6 @@
-
 streamlit
 matplotlib
 pandas
 plotly
 scikit-learn
-tensorflow
+tensorflow==2.12.0
