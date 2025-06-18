@@ -191,11 +191,11 @@ predictor.prepare_data(df)
 import joblib
 
 # Load scalers before loading model or before prediction
-predictor.scaler_features = joblib.load('scaler_features.save')
-predictor.scaler_target = joblib.load('scaler_target.save')
+predictor.scaler_features = joblib.load('App/scaler_features.save')
+predictor.scaler_target = joblib.load('App/scaler_target.save')
 
 # Load the model
-predictor.load('gdp_model.keras')
+predictor.load('App/gdp_model.keras')
 
 import streamlit as st
 import pandas as pd

@@ -33,10 +33,7 @@ class GDPPredictor:
         numeric_columns = data.select_dtypes(include=[np.number]).columns
         data[numeric_columns] = data[numeric_columns].fillna(data[numeric_columns].mean())
         
-        # Encode categorical variables
-        if 'Status' in data.columns:
-            data['Status_encoded'] = self.label_encoder.fit_transform(data['Status'].fillna('Unknown'))
-        
+       
 
         # Only include numeric columns as features
         potential_features = [col for col in data.columns]
