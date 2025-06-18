@@ -7,7 +7,6 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
-import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings('ignore')
 
